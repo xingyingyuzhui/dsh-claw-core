@@ -1,6 +1,6 @@
 {
   "name": "dsh-claw-core",
-  "version": "0.3.0-rc.1",
+  "version": "0.3.0-rc.2",
   "description": "Shared core library for dsh-claw-* plugins (not a DSH plugin row). Claw 套件共享核心库，不是插件行。",
   "keywords": [
     "dsh",

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { mkdtempSync, mkdirSync, symlinkSync, writeFileSync } from 'node:fs'
+import { mkdtempSync, mkdirSync, readFileSync, symlinkSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { test } from 'node:test'
@@ -51,7 +51,7 @@ test('live-agents propagates list() throws', () => {
 })
 
 test('version constants', () => {
-  assert.equal(CORE_VERSION, '0.3.0-rc.1')
+  assert.equal(CORE_VERSION, JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version)
   assert.equal(SUPPORTED_DSH, '0.2.0-rc.2')
   assert.equal(SUPPORTED_DSH_PEER, '^0.2.0-rc.1')
 })
