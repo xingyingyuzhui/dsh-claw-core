@@ -4,7 +4,7 @@ Shared core library for `dsh-claw-*` / suite components.
 
 **这不是 DSH 插件行** — no `cordis.patch.yml`, no `host.js`. Publishable npm package consumed by claw governance plugins.
 
-**Not a plugin row** — library only. Components depend on exact semver (`0.3.0-rc.1+`); do not sibling-import this as `../dsh-claw-core` in publish manifests.
+**Not a plugin row** — library only. Components depend on the exact same suite version; do not sibling-import this as `../dsh-claw-core` in publish manifests.
 
 ## Exports
 
